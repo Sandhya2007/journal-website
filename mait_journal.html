@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Journal</title>
+    <style>
+        a{
+            color: rgb(4, 14, 14);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;           
+            padding: 0.001em;
+            display: flex;
+          
+        }
+        .header-table {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5em;
+            width: 100%;
+        }
+
+        .header-table img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .header-table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        h1, h3 {
+            margin: 0;
+        }
+
+        .header-table .right-align {
+            text-align: right;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        header div {
+        flex-grow: 1; /* Allows the div to grow and take up remaining space */
+        text-align: center;
+        }
+
+        header h1 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        header h3 {
+            display: block; 
+            margin: 0;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 0.6em;
+            display: flex;
+            justify-content:center;
+            
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.01em 1em;
+            margin: 0 1em;
+            border-radius: 5px;
+            font-size:large;
+        }
+        nav a:hover{
+            color: #efd9af;
+        }
+        nav a:active{
+            color: #3f0808;
+            text-decoration: underline;
+            
+        }
+        .feedback{
+            color: #fff;
+            text-decoration: none;
+            padding: 0.01em 1em;
+            margin: 0 1em;
+            border-radius: 5px;
+            font-size:large;
+            &:hover{
+            color: #efd9af;
+
+            }
+        }    
+        .bw a{
+            font-size: 15px;
+        }
+        
+        .bw a:hover{
+            color: rgb(57, 47, 191);
+        }
+        .aboutjournal h2{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #3f0808;
+            
+        }
+        .aboutjournal p{
+
+            margin: 50px;
+            max-width: 600;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+
+        }
+        .dropdown {
+  position: relative;
+}
+
+#contact-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background-color: #aba4a3;
+  color: #121111;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+}
+
+#contact-menu-toggle {
+  display: none;
+}
+
+#contact-menu-toggle:checked ~ #contact-menu {
+  display: block;
+}
+
+#contact-menu form {
+  margin: 0;
+}
+
+#contact-menu label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#contact-menu input,
+#contact-menu textarea {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#contact-menu input[type="submit"] {
+  background-color: #555;
+  color: #fff;
+  padding: 0.5em;
+  border: none;
+  cursor: pointer;
+}
+
+#contact-menu input[type="submit"]:hover {
+  background-color: #444;
+}
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.0001em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <table class="header-table">
+            <tr>
+                <td style="text-align: right;">
+                    <img src="images/Mait_Logo.png" alt="College Journal Logo">
+                </td>
+                <td style="text-align: right;">
+                    <h1>MAIT Journal of Science and Technology</h1>
+                    <h3>(Maharaja Agrasen University Publications, New Delhi)</h3>
+                </td>
+                <td style="text-align: right;">
+                    ISSN:25XX-12XX(Print Version)
+                    <br />
+                    ISSN:25XX-12XX(Electronic Version Version)
+                </td>
+            </tr>
+        </table>
+    </header>
+    <nav>
+        <a href="mait_journal.html">Home</a>
+        <a href="aimscope.html">Aim & Scope</a>
+        <a href="news.html">News & Events</a>
+        <a href="current.html">Current Issues</a>
+        <a href="archives.html">Archives</a>
+        <div class="dropdown">
+            <input type="checkbox" id="contact-menu-toggle">
+            <label class="feedback" for="contact-menu-toggle">Feedback</label>
+            <div id="contact-menu" class="contact-menu">
+              <form action="/submit_contact" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="issue">Review:</label><br>
+                <textarea id="issue" name="issue"></textarea><br>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+  
+    <table style="z-index:9" border="0" width="100%" id="table2" cellspacing="0" cellpadding="5" height="100%" bgcolor="#ffffff">
+
+		<tbody>
+            <tr>
+			<td valign="top" width="199" bgcolor="#eef0f2">
+			<table border="0" width="209" id="table7" height="343" cellpadding="6">
+
+		    <tbody>
+
+				
+				<tr>		
+			<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="callforpapers.html">
+                    Call for Papers<br>(Regular Issue)</a></font></td>
+				</tr>
+
+			<tr>
+				<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a href="current.html" class="r">Current Issues</a></font>                    </td>
+			</tr>
+            <tr>
+                <td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                <font style="FONT-SIZE: 10pt">
+                <a class="r" href="archives.html">Archives</a></font></td>
+            </tr>
+					
+			<tr>
+				<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="login.html">Member Login</a>
+                    </font>
+                    </td>
+			</tr>		
+
+			<tr>
+				<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="submitpapers.html">Submit Paper</a>
+                    </font>
+                    </td>
+			</tr>
+
+				<tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a href="authorguidelines.html" class="r">
+                    Authors' Guidelines</a></font></td>
+				</tr>
+				<tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="reviewprocess.html">
+                    Review Process</a></font></td>
+				</tr><tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+					<a href="publicationethics.html" class="r">
+                    Publication Ethics</a></font></td>
+				</tr>
+				<tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="editorialboard.html">
+                     Editorial Board</a></font></td>
+				</tr>
+				<tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="boardofreferees.html">
+                    Board of Referees</a></font></td>
+				</tr>
+
+								<tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="copyright.html">
+                    Copy Right &amp; Ownership</a></font></td>
+				</tr>
+				<tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="">
+                    Downloads</a></font></td>
+				</tr>
+				<tr>
+					<td class="bw" height="25" valign="top" bgcolor="#ffffff" width="193">
+                    <font style="FONT-SIZE: 10pt">
+                    <a class="r" href="contact.html">
+                    Contact Us</a></font></td>
+				</tr>
+            </tbody>
+            </table>
+            </td>
+            <td>
+                <img src="images/edited final mait front.png" alt="mait" width="100%"/>
+            </td>
+        </tr>
+    </tbody>
+</table>	 	
+<br>
+    <div class="aboutjournal">
+        <h2 >Welcome to the MAIT Journal!</h2>
+        <p>The journal <b>MAIT Journal of Science and Technology</b>, published by 
+             <i> Maharaja Agrasen University Publications, New Delhi </i>, will provide a 
+            forum for publishing original contributions in the field of science 
+            and technology that also includes comprehensive technical review 
+            articles in interdisciplinary domains and original research papers 
+            in all important engineering topics. The journal encourages all 
+            experienced and qualified researchers, professionals, and other 
+            stakeholders to share their knowledge and experiences. 
+            The journal is published Annually. The first issue of the journal
+             is likely to be released very soon.
+            <br><br><br><br></p>
+        </div>
+
+    <footer>
+        <p>&copy; 2024 College Journal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

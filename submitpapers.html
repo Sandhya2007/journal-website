@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit papers</title>
+    <style>
+      a{
+            color: rgb(4, 14, 14);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;           
+            padding: 0.001em;
+            display: flex;
+          
+        }
+        .header-table {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5em;
+            width: 100%;
+        }
+
+        .header-table img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .header-table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        h1, h3 {
+            margin: 0;
+        }
+
+        .header-table .right-align {
+            text-align: right;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        header div {
+        flex-grow: 1; /* Allows the div to grow and take up remaining space */
+        text-align: center;
+        }
+
+        header h1 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        header h3 {
+            display: block; 
+            margin: 0;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 0.6em;
+            display: flex;
+            justify-content:center;
+            
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.01em 1em;
+            margin: 0 1em;
+            border-radius: 5px;
+            font-size:large;
+        }
+        nav a:hover{
+            color: #efd9af;
+        }
+        nav a:active{
+            color: #3f0808;
+            text-decoration: underline;
+            
+        }
+        .feedback{
+            color: #fff;
+            text-decoration: none;
+            padding: 0.01em 1em;
+            margin: 0 1em;
+            border-radius: 5px;
+            font-size:large;
+            &:hover{
+            color: #efd9af;
+
+            }
+        }    
+        .bw a{
+            font-size: 15px;
+        }
+        
+        .bw a:hover{
+            color: rgb(57, 47, 191);
+        }
+        .aboutjournal h2{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #3f0808;
+            
+        }
+        .aboutjournal p{
+
+            margin: 50px;
+            max-width: 600;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+
+        }
+       
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp3648044.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+          }
+        /* #infoBox {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f1efd2;
+            padding: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            width: 400px;
+            text-align: center;
+          } */
+
+          #infoBox {
+    margin-top: 50px; 
+    background-color: #d0cdbd;
+    padding: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    align-self: center; 
+}
+          
+          #infoBox h2 {
+            margin-top: 0;
+          }
+          
+          #infoBox label {
+            display: block;
+            margin-bottom: 5px;
+          }
+          
+          #infoBox input[type="text"],
+          #infoBox input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+          }
+          
+          #infoBox input[type="submit"] {
+            padding: 10px;
+            background-color: #2b0306;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+          }
+          
+          #infoBox #register1 {
+            padding: 10px;
+            background-color: #2b0306;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+          }
+          
+          #infoBox #register2,
+          #infoBox #register {
+            padding: 10px;
+            background-color: #2b0306;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+          }
+          
+          #infoBox input[type="submit"]:hover {
+            background-color:#86363b;
+            color: #fff;
+          }
+
+          #infoBox #register2:hover,
+          #infoBox #register:hover {
+            background-color: #86363b;
+          }
+          
+          #infoBox #register1:hover {
+            background-color: #86363b;
+          }
+          
+          #infoBox #closeBox {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+          }
+          
+          #infoBox p {
+            margin-bottom: 10px;
+          }
+          
+          #infoBox a {
+            color: #413e3e;
+            text-decoration: none;
+          }
+          
+          #infoBox a:hover {
+            text-decoration: underline;
+          }
+
+          .forgot-password {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #520c0c;
+            text-decoration: none;
+        }
+        
+        .forgot-password:hover {
+            color: #b1b1d1;
+        }
+        
+          #copyright {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+          }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.0001em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+ 
+    </style>
+</head>
+
+<body>
+  <header>
+    <table class="header-table">
+        <tr>
+            <td style="text-align: right;">
+                <img src="images/Mait_Logo.png" alt="College Journal Logo">
+            </td>
+            <td style="text-align: right;">
+                <h1>MAIT Journal of Science and Technology</h1>
+                <h3>(Maharaja Agrasen University Publications, New Delhi)</h3>
+            </td>
+            <td style="text-align: right;">
+                ISSN:25XX-12XX(Print Version)
+                <br />
+                ISSN:25XX-12XX(Electronic Version Version)
+            </td>
+        </tr>
+    </table>
+</header>
+<nav>
+    <a href="mait_journal.html">Home</a>
+    <a href="aimscope.html">Aim & Scope</a>
+    <a href="news.html">News & Events</a>
+    <a href="current.html">Current Issues</a>
+    <a href="archives.html">Archives</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+<br>
+<!-- submitpapers -->
+    <form action="https://www.facebook.com/">
+  <div id="infoBox">
+    <!-- <span id="closeBox" onclick="closeBox()">×</span> -->
+    <h2>Enter the following details: </h2>
+    <form id="infoForm">
+      <label for="username">Username:</label>
+      <input type="text" placeholder="Username" id="username" name="username" required><br>
+      <label for="password">Password:</label>
+      <input type="password" placeholder="Password" id="password" name="password" required><br>
+      <input type="submit" value="LOGIN"><br>
+      <a href="https://www.google.com/" class="forgot-password">Forgot password?</a>
+      <!-- <p>or</p> -->
+      <button id="register1">REGISTER</button>
+      <p><a href="https://www.google.com/">Register Help</a></p>
+      <p><a href="https://www.google.com/">Login Help</a></p>
+      <p class="separator"></p>
+
+      <p><button id="register2">REVIEWER LOGIN</button></p>
+      <p><button id="register">EDITOR LOGIN</button></p>
+    </form>
+    <p id="copyright">Lorem ipsum Copyright &copy; 1999 PQR Enterprises Corporation</p>
+    <p><a href="#">XYZ Privacy Policy</a> | <a href="#">Data Privacy Policy</a></p>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <footer>
+    <p>&copy; 2024 College Journal. All rights reserved.</p>
+</footer>
+</body>
+</html>
